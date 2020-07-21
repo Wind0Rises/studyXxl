@@ -1,0 +1,26 @@
+server:
+  port: 7001
+  servlet:
+    context-path: /xxl
+
+xxl:
+  simple:
+    adminAddresses: http://localhost:8080/xxl-job-admin
+    accessToken:
+    appname: study-xxl-simple
+    address:
+    ip:
+    port: 9999
+    logpath: E:\logs\xxl
+    logretentiondays: 30
+
+#  请求地址为：/actuator/shutdown
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+      sensitive: false
