@@ -13,10 +13,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomJob {
 
-    @XxlJob("testHandler")
+    @XxlJob(value = "testHandler", init = "init", destroy = "destroy")
     public ReturnT<String> testHandler(String param) throws Exception {
-        System.out.println("###################################");
+        System.out.println("==============定时任务被执行了======================");
         return ReturnT.SUCCESS;
     }
+
+    public void init() {
+        System.out.println("=============  This is Init  ================");
+    }
+
+     public void destroy() {
+        System.out.println("=============  This is destroy  ================");
+    }
+
 
 }

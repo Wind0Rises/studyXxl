@@ -11,7 +11,8 @@ xxl:
     address:
     ip:
     port: 9999
-    logpath: E:\logs\xxl
+    #logpath: E:\logs\xxl
+    logpath: D:\logs\xxl
     logretentiondays: 30
 
 #  请求地址为：/actuator/shutdown
